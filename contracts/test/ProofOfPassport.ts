@@ -181,7 +181,7 @@ describe("Proof of Passport", function () {
       const unix_timestamp = await formatter.dateToUnixTimestamp("230512") // 2023 05 12
       console.log('unix_timestamp', unix_timestamp.toString());
 
-      var date = new Date(Number(unix_timestamp) * 1000);
+     const date = new Date(Number(unix_timestamp) * 1000);
       console.log("date:", date.toUTCString());
 
       expect(date.getUTCFullYear()).to.equal(2023);
