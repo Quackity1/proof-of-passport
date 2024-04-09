@@ -14,7 +14,6 @@ chai.use(chaiAsPromised);
 
 console.log("The following snarkjs error logs are normal and expected if the tests pass.");
 
-// Define helper functions
 async function performFullProve(inputs: any, wasmPath: string, zkeyPath: string) {
     return groth16.fullProve(inputs, wasmPath, zkeyPath);
 }
@@ -77,7 +76,6 @@ describe('Circuit tests', function () {
     });
 
     describe('Selective disclosure', function () {
-        // Define helper function for selective disclosure
         async function performSelectiveDisclosure(combination: string[]) {
             const attributeToReveal = Object.keys(attributeToPosition).reduce((acc, attribute) => {
                 acc[attribute] = combination.includes(attribute);
